@@ -1,0 +1,104 @@
+<%- include('partials/navbar') %>
+  <br><br>
+  <br>
+
+  <section id="contact" class="contact">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>ROQ</h2>
+        <p>Request for Quotation</p>
+      </div>
+
+      <div class="row">
+
+        <div class="col d-flex justify-content-center">
+        <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-center" data-aos="fade-up" data-aos-delay="200">
+          <form action="/order-reservation" method="POST"  class="email-form">
+            <div class="row">
+              <div class="form-group col-md-6">
+                <label for="name">Company Name</label>
+                <input type="text" name="company_name" class="form-control" id="company_name" placeholder="Your Name" required>
+              </div>
+              <div class="form-group col-md-6 mt-3 mt-md-0">
+                <label for="email">Company Location</label>
+                <input type="text" class="form-control" name="company_location" id="company_location" placeholder="Your Email" required>
+              </div>
+             
+              <div class="form-group col-md-6 mt-3 mt-md-0">
+                <label for="name">Destination Company</label>
+                <input type="text" class="form-control" name="dest_company" id="dest_company" placeholder="Your Email" required>
+              </div>
+              <div class="form-group col-md-6 mt-3 mt-md-0">
+                <label for="name">Destination</label>
+                <input type="text" class="form-control" name="destination" id="destination" placeholder="Your Email" required>
+              </div>
+
+              <div class="form-group col-md-6 mt-3 mt-md-0">
+                <label for="name">Orgin pincode</label>
+                <input type="text" class="form-control" name="orgin_pincode" id="orgin_pincode" placeholder="Your Email" required>
+              </div>
+              
+
+              <div class="form-group col-md-6 mt-3 mt-md-0">
+                <label for="name">Destination pincode</label>
+                <input type="text" class="form-control" name="destination_pincode" id="destination_pincode" placeholder="Your Email" required>
+              </div>
+
+              <div class="form-group col-md-6 mt-3 mt-md-0">
+                <label for="name">Contains</label>
+                <input type="text" class="form-control" name="contain" id="contain" placeholder="Your Email" required>
+              </div>
+
+              <div class="form-group col-md-6 mt-3 mt-md-0">
+                <label for="name">Value of goods</label>
+                <input type="text" class="form-control" name="Valofgoods" id="Valofgoods" placeholder="Your Email" required>
+              </div>
+
+              <div class="form-group col-md-6 mt-3 mt-md-0">
+                <label for="name">Weight(In tons)</label>
+                <input type="text" class="form-control" name="weight" id="weight" placeholder="Your Email" required>
+              </div>
+
+              <div class="form-group col-md-6 mt-3 mt-md-0">
+                <label for="name">Pick-up date</label>
+                <input type="date" class="form-control" name="#" id="Valofgoods" placeholder="Your Email" required>
+              </div>
+              <div class="form-group col-md-6 mt-3 mt-md-0">
+                <label for="name">Delivery date</label>
+                <input type="date" class="form-control" name="#" id="Valofgoods" placeholder="Your Email" required>
+              </div>
+
+
+              <div class="form-group col-md-6 mt-3 mt-md-0">
+                <label for="name">orgin</label>
+                <input type="text" class="form-control" name="orgin" id="orgin" placeholder="Your Email" required>
+              </div>
+
+             
+
+            
+            </div>
+
+
+            
+          
+            <div class="form-group mt-3">
+              <label for="name">Message</label>
+              <textarea class="form-control" name="message" rows="10" required></textarea>
+            </div>
+            <div class="my-3">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
+            </div>
+            <div class="text-center"><button type="submit">Send Message</button></div>
+          </form>
+        </div>
+      </div>
+
+      </div>
+
+    </div>
+  </section>
+  <%- include('partials/footer') %>

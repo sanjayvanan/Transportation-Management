@@ -1,0 +1,82 @@
+<header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+  
+      <div class="logo">
+        <h1 class="text-light"><a href="/"><span>AKS</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="https://imgs.search.brave.com/ury-UARgcteeCXbN1S-FLb4cvV2yQ8ugpCQF4acwkRI/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5l/V3dVc29jV1FvZEh0/LTBjajhaN0FBSGFI/YSZwaWQ9QXBp" alt="" class="img-fluid" style="height: 100px;"></a> -->
+      </div>
+  
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="/">Home</a></li>
+          <li><a class="nav-link scrollto" href="/about_us">About Us</a></li>
+          <li><a class="nav-link scrollto" href="/services">Services</a></li>
+          <li><a class="nav-link scrollto" href="/order_reservation">Order reservation</a></li>
+          <li> <a href="/Reservations" class="notification">
+            <span>Reservations</span>
+            <span class="badge">3</span>
+          </a></li>
+         
+          <li><a class="nav-link scrollto" href="/contact">Contact</a></li>
+        
+            <li><a class="getstarted scrollto" id="login"href="/users/login">Login</a></li>
+          <button class="profile-btn">
+         
+            
+          </button>
+  
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+  
+    </div>
+  </header>
+  
+  <br><br>
+  <br><br><br>
+  
+
+
+
+
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+      <div class="card card-body">
+        <h1 class="text-center mb-3"><i class="fas fa-sign-in-alt"></i>  Login</h1>
+        <%- include ("./partials/messages"); %>
+        <form action="/users/login" method="POST">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-control"
+              placeholder="Enter Email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="form-control"
+              placeholder="Enter Password"
+            />
+          </div>
+          <br>
+          <button type="submit" class="btn btn-primary btn-block">Login</button>
+        </form>
+        
+        <p class="lead mt-4">
+          No Account? <a href="/users/register">Register</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <br><br><br>
+  
+  <%- include('partials/footer') %>
+  

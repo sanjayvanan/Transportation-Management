@@ -1,0 +1,72 @@
+<%- include('partials/navbar') %>
+    <br><br><br>
+ 
+	
+<!-- comments container -->
+		<div class="comment_block">
+
+		
+
+		 <!-- used by #{user} to create a new comment -->
+		 </div><br>
+
+			<!-- current #{user} avatar -->
+		 	
+            <div class="section-title">
+                <h2>Reservations</h2>
+                <p>My Orders</p>
+              </div>
+
+
+			  <% for (let i of data) { %>
+				<% if(i.isDeclined == true) { %>
+				<br>
+			  <div class="d-flex justify-content-center row">
+				<div class="col-md-8">
+					<div class="d-flex flex-column comment-section">
+						<div class="bg-white p-2">
+							<div class="d-flex flex-row user-info"><img class="rounded-circle" src="https://imgs.search.brave.com/ANyA2zXHibQvnQliNTO2qEW_-jn2rZfc3RV_-cUQMyU/rs:fit:860:900:1/g:ce/aHR0cDovL3d3dy5w/bmdhbGwuY29tL3dw/LWNvbnRlbnQvdXBs/b2Fkcy81L1Byb2Zp/bGUtQXZhdGFyLVBO/Ry5wbmc" width="40">
+								<div class="d-flex flex-column justify-content-start ml-2"><span class="d-block font-weight-bold name"><%= i.company_name %></span><span class="date text-black-50">Shared publicly - Jan 2020</span></div>
+							</div>
+							<div class="mt-2">
+								<p class="comment-text"></p>
+							</div>
+						</div>
+						<div class="bg-white">
+						
+						</div>
+						
+						</div>
+					</div>
+				</div>
+				<%  } %>
+
+				<% } %> 
+
+				<br>
+			</div>
+		</div>
+		
+										<script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js'></script>
+										<script type='text/javascript' src='#'></script>
+										<script type='text/javascript' src='#'></script>
+										<script type='text/javascript' src='#'></script>
+										<script type='text/javascript'></script>
+										<script type='text/javascript'>var myLink = document.querySelector('a[href="#"]');
+										myLink.addEventListener('click', function(e) {
+										  e.preventDefault();
+										});</script>
+
+
+		 
+
+		
+<!-- partial -->
+
+
+
+
+
+
+
+

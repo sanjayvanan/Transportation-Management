@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Invoice</title>
+	<style>
+		table {
+			width: 100%;
+			border-collapse: collapse;
+		}
+
+		table td, table th {
+			padding: 8px;
+			border: 1px solid black;
+			text-align: left;
+		}
+
+		table th {
+			background-color: #ddd;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<h1>Invoice</h1>
+		<hr>
+		<table>
+			<tr>
+				<th>Invoice Number</th>
+				<td><%= invoice.invoiceNumber %></td>
+			</tr>
+			<tr>
+				<th>Date</th>
+				<td><%= invoice.date %></td>
+			</tr>
+			<tr>
+				<th>Customer Name</th>
+				<td><%= invoice.customer.name %></td>
+			</tr>
+			<tr>
+				<th>Customer Address</th>
+				<td><%= invoice.customer.address %></td>
+			</tr>
+			<tr>
+				<th>Customer Email</th>
+				<td><%= invoice.customer.email %></td>
+			</tr>
+		</table>
+		<hr>
+		<table>
+			<tr>
+				<th>Description</th>
+				<th>Quantity</th>
+				<th>Price</th>
+				<th>Total</th>
+			</tr>
+			<% invoice.items.forEach(function(item) { %>
+				<tr>
+					<td><%= item.description %></td>
+					<td><%= item.quantity %></td>
+					<td>$<%= item.price %></td>
+					<td>$<%= item.quantity * item.price %></td>
+				</tr>
+			<% }); %>
+			<tr>
+				<td colspan="3" style="text-align: right;">Total:</td>
+				<td>$<%= invoice.total %></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
