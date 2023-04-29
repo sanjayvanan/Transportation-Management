@@ -13,13 +13,17 @@
           <li><a class="nav-link scrollto" href="/about_us">About Us</a></li>
          
           <li><a class="nav-link scrollto" href="/services">Services</a></li>
+          <% if (user.email != "aravinth@gmail.com" ) { %>
           <li><a class="nav-link scrollto" href="/myOrders">My Orders</a></li> 
           <li><a class="nav-link scrollto" href="/order-reservation">RFQ</a></li>
+          <% } else { %>
           <li> <a href="/Reservations" class="notification">
             <span>Reservations</span>
             <span class="badge">3</span>
           </a></li>
          
+          <% } %>
+
           <li><a class="nav-link scrollto" href="/contact">Contact</a></li>
           <% if (user) { %>
             <li class="dropdown"><a href="#"><b><span><%= user.name %></span> </b><i class="bi bi-chevron-down"></i>  <lord-icon
